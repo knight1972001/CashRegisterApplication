@@ -38,13 +38,6 @@ public class HistoryList extends AppCompatActivity {
         soldItemList.forEach(item -> {
             System.out.println(item.getDateSold());
         });
-//        if(getIntent().hasExtra("bundle")) {
-
-//            Bundle bundle = getIntent().getBundleExtra("bundle");
-//            soldItemList = bundle.getParcelableArrayList("soldItemList");
-//
-//        }
-
         recyclerList.setLayoutManager(new LinearLayoutManager(this));
         adapter = new ItemRecyclerAdapter(soldItemList, this, new ItemRecyclerAdapter.OnItemClickListener() {
             @Override

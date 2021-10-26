@@ -26,7 +26,6 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity {
     private ArrayList<SoldItem> soldItemList = new ArrayList<>();
     private ArrayList<Item> itemList = new ArrayList<>();
-
     private boolean isReset = true;
     private Utils utils = new Utils();
     private AlertDialog.Builder builder;
@@ -49,13 +48,11 @@ public class MainActivity extends AppCompatActivity {
         if (savedInstanceState != null) {
             getDataFromSavedPage(savedInstanceState);
         }
-
         fetchData();
     }
 
     @Override
     protected void onSaveInstanceState(@NonNull Bundle outState) {
-
         TextView productName = (TextView) findViewById(R.id.productType);
         TextView quantity = (TextView) findViewById(R.id.quantity);
         TextView totalPrice = (TextView) findViewById(R.id.totalPrice);
